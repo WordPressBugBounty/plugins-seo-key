@@ -124,8 +124,10 @@ function seokey_head_meta_description_add() {
 		$local_checked = (bool) get_post_meta( get_the_ID(), 'seokey-content_visibility', true );
 	}
 	if ( !$local_checked ) {
-		$description = seokey_head_meta_description();
-		if ( ! empty( $description ) ) {
+		$description 	= seokey_head_meta_description();
+		// Allow other plugins to stop meta description display
+		$stop 			= apply_filters('seokey_head_meta_description_add_switch', false );
+		if ( ! empty( $description ) && !$stop ) {
 			printf( '<meta name="description" content="%s">' . "\n", esc_attr( $description ) );
 		}
 	}

@@ -10,7 +10,7 @@
  * Domain Path: /public/assets/languages/
  * Version: 2.0.2
  * Requires at least: 5.5
- * Tested up to: 6.7
+ * Tested up to: 6.8
  * Requires PHP: 7.2
  * Network: true
  * License: GPLv2
